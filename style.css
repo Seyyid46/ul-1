@@ -10,7 +10,7 @@
     --bg-color: #00021e;
     --second-bg-color: #cf7116;
     --text-color: #ffffff;
-    --main-color: #ff8000;
+    --main-color: rgba(253, 94, 8, 0.61);
 }
 html {
     font-size: 60%;
@@ -70,4 +70,144 @@ span{
 .navbar a:hover{
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
+}
+/*Style of the Home-Sectionr*/
+section{
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20rem;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+.home-content h1{
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+    line-height: 1;
+}
+.home-content h3{
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+.home-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+.home-image img{
+    width: 25vw;
+    border-radius: 35%;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+.home-image:hover img{
+    box-shadow: 0 0 25px var(--main-color),
+    0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+.social-icons a:hover{
+    color: var(--text-color);
+    background-color: var(--main-color);
+    transform: scale(1.2)translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.btn-group{
+    display: flex;
+    gap: 1rem;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--main-color);
+    box-shadow: 0 0 25px 0 var(--main-color);
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    color: black;
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+.btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 25px var(--main-color),
+    0 0 50px var(--main-color);
+}
+.btn a{
+    color: black;
+}
+.text-animation{
+    font-size: 10px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+    content: "Web-Entwickler";
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+@keyframes words {
+    0%,
+    20%{
+        content: "Konzentration...";
+    }
+    21%,
+    40%{
+        content: "Speed...";
+    }
+    41%,
+    60%{
+        content: "ICH.";
+    }
+    61%,
+    80%{
+        content: "BIN.";
+    }
+    81%,
+    100%{
+        content: "SPEEEEED.";
+    }
+}
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{width: 0;}
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{width: calc(100% + 8px);}
 }
