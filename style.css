@@ -8,7 +8,7 @@
 }
 :root {
     --bg-color: #00021e;
-    --second-bg-color: #cf7116;
+    --second-bg-color: #000216;
     --text-color: #ffffff;
     --main-color: rgba(253, 94, 8, 0.61);
 }
@@ -210,4 +210,43 @@ section{
 @keyframes typing {
     10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{width: 0;}
     5%,20%,25%,40%,45%,60%,65%,80%,85%{width: calc(100% + 8px);}
+}
+
+/*Style of the About Section*/
+.aboutMe{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    background-color: var(--second-bg-color);
+}
+.about-img img{
+    width: 35vw;
+    border-radius: 35%;
+    margin-right: 5rem;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+.about-img:hover img{
+    box-shadow: 0 0 25px var(--main-color),
+    0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
+}
+.about-content h2{
+    margin-top: 4rem;
+    font-size: 7rem;
+    text-align: left;
+}
+.about-content p{
+    font-size: 1.5rem;
+}
+::-webkit-scrollbar{
+    width: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-track{
+    background: var(--bg-color);
 }
