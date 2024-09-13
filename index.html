@@ -6,19 +6,22 @@
     <title>Der Trendsetter</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Images/bmw-32.png" type="image/x-icon">
 </head>
 <body>
     <header class="header">
+        <nav class="navbar">
+            <a href="#aboutMe">Über mich</a>
+            <a href="#images">Bilder</a>
+        </nav>
+
         <a href="#home" class="logo">
-            <span>UL-1</span>
+            <img src="Images/bmw-64.png" alt="">
         </a>
 
         <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#aboutMe">Über mich</a>
             <a href="#video">Video</a>
-            <a href="#images">Bilder</a>
+            <a href="#dashCam">Dashcam</a>
         </nav>
 
         <i class="bx bx-menu-alt-right" id="menu-icon"></i>
@@ -78,12 +81,26 @@
         </div>
     </section>
 
-    <section class="video" id="video">
-
-    </section>
-
     <section class="images" id="images">
+        <div class="gallery">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+    </section>
+
+    <section class="video" id="video">
+        <h2 class="heading">Video</h2>
+        <div class="video-content">
+            <video autoplay controls muted loop src="Images/BMW%20F30%20320d.MP4" id="vid"></video>
+        </div>
 
     </section>
+
+    <section class="dashCam" id="dashCam">
+
+    </section>
+    <script src="app.js"></script>
 </body>
 </html>
